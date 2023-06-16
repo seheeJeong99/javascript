@@ -4,7 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <script defer src="variable.js"></script>
+        <script defer src="function.js"></script>
+        <!-- 1. head+aysnc
+                html parsing하는 동안(코드 분석) js 파일 다운로드함. 이후 html parsing 블락하고 js 파일 실행(executing) 이후 남은 html parsing
+                -> 페이지를 보는데 시간이 오래 걸림
+             2. head+defer  -> best
+                html parsing하는 동안 js 파일 fetching(다운로드) 여기까진 같음. html parsing을 끝까지 하고 끝나면 executing js
+                -> 페이지가 준비되면 js파일을 실행하기 때문에 원하는 순서대로 스크립트 실행 가능
+        -->
     </head>
     <body></body>
+    <!-- body에 스크립트 태그 넣을경우 html이 한번에 보이지만 자바스크립트로 구현한 요소들을 사용하려면 너무 오래걸림 
+        (fetching+executing 시간 모두 기다려야함)-->
 </html>
